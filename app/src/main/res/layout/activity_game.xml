@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mobteam10.project.GameActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/userNameText1"
+                    android:layout_width="70dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/userScoreText1"
+                    android:layout_width="70dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/userNameText2"
+                    android:layout_width="70dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/userScoreText2"
+                    android:layout_width="70dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/userNameText3"
+                    android:layout_width="70dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/userScoreText3"
+                    android:layout_width="70dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/userNameText4"
+                    android:layout_width="70dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/userScoreText4"
+                    android:layout_width="70dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/chatEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="64"
+            android:singleLine="true"
+            android:maxLength="20"/>
+
+        <Button
+            android:id="@+id/chatSendButton"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="▲"
+            android:textColor="@android:color/background_light"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@id/linearLayout"
+        android:layout_below="@+id/tableLayout"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/scrollView">
+
+            <TextView
+                android:id="@+id/chatView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/answerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="정 답 : XXXXX"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:text="00:00"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/redPaint"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/red_oval_button" />
+
+            <ImageButton
+                android:id="@+id/greenPaint"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/redPaint"
+                android:background="@drawable/green_oval_button" />
+
+            <ImageButton
+                android:id="@+id/bluePaint"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/greenPaint"
+                android:background="@drawable/blue_oval_button" />
+
+            <ImageButton
+                android:id="@+id/eraseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/bluePaint"
+                android:background="@drawable/eraser" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/drawContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:visibility="visible">
+
+                <mobteam10.project.DrawingView
+                    android:id="@+id/drawingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/background" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
